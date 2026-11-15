@@ -5,7 +5,7 @@
 
 from sqlalchemy.orm import Session
 
-from app.error_repository import create_error
+from backend.fastapi_app.app.error_repository import create_error
 
 
 def save_error(db: Session, error_message: str):

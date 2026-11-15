@@ -3,7 +3,7 @@
 
 from sqlalchemy.orm import Session
 
-from app.models import ErrorLog
+from backend.fastapi_app.app.models import ErrorLog
 
 
 def create_error(db: Session, error_data: dict):

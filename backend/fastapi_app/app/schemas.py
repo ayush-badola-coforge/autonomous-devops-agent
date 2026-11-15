@@ -16,3 +16,6 @@ class ErrorLogResponse(BaseModel):
     created_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
+
+class SolutionResponse(BaseModel):
+    answer: str

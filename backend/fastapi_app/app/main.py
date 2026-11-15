@@ -2,8 +2,9 @@
 # Think of main.py as the starting point of our entire backend.
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-from app.incidents import router as incidents_router
+from backend.fastapi_app.app.incidents import router as incidents_router
 
 
 app = FastAPI(
@@ -12,6 +13,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 app.include_router(
     incidents_router,
