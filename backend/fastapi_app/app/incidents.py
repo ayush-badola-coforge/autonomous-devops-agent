@@ -14,10 +14,11 @@ router = APIRouter(
 
 @router.post("/solve", response_model=SolutionResponse)
 def solve_incident(error: ErrorLogCreate, db: Session = Depends(get_db)):
-    save_error(
-        db=db,
-        error_message=error.error_message
-    )
+    #Surpassing SQL db operations for time being.
+    # save_error(
+    #     db=db,
+    #     error_message=error.error_message
+    # )
     answer = rag_service.answer(
         error.error_message
     )

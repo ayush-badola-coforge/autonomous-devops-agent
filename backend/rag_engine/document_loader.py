@@ -2,6 +2,7 @@
 
 from pathlib import Path
 from typing import List, Dict
+from docx import Document
 import pymupdf
 
 class ParseService:
@@ -48,3 +49,13 @@ class ParseService:
             text += page.get_text()
 
         return text
+
+    def _extract_docx(self, file_path: Path) -> str:
+        doc = Document(file_path)
+
+        text = []
+
+        for paragraph in doc.paragraphs:
+            text.append(paragraph.text)
+
+        return "\n".join(text)

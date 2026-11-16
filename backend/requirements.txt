@@ -4,3 +4,9 @@ sqlalchemy
 pyodbc
 python-dotenv
 pydantic
+python-docx
+pymupdf
+chromadb
+openai
+langchain_text_splitters
+sqlalchemy.orm

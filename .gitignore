@@ -74,4 +74,4 @@ data/vector_db/*
 
 # Logs
 *.log
-logs/
+/chroma_data/

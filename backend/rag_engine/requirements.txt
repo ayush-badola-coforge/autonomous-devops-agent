@@ -1,7 +1,0 @@
-pypdf
-sentence-transformers
-chromadb
-openai
-langchain_text_splitters
-pymupdf
-sqlalchemy.orm
