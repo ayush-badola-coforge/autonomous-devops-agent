@@ -10,3 +10,6 @@ chromadb
 openai
 langchain_text_splitters
 sqlalchemy.orm
+ragas
+datasets
+langchain_openai

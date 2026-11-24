@@ -1,0 +1,232 @@
+[
+
+  {
+    "question": "How do I troubleshoot Git checkout failures in Jenkins?",
+    "category": "jenkins",
+    "expected_docs": [
+      "jenkins_troubleshooting.md"
+    ],
+    "reference_answer": "Git checkout failures are usually caused by incorrect repository URLs, authentication failures, invalid credentials, SSH key issues, or network connectivity problems."
+  },
+  {
+    "question": "Why is my Jenkins agent offline?",
+    "category": "jenkins",
+    "expected_docs": [
+      "jenkins_troubleshooting.md"
+    ],
+    "reference_answer": "A Jenkins agent may appear offline because the agent process stopped, the node is unreachable, SSH connectivity is broken, or resources are exhausted."
+  },
+  {
+    "question": "Why is Jenkins build stuck in queue?",
+    "category": "jenkins",
+    "expected_docs": [
+      "jenkins_troubleshooting.md"
+    ],
+    "reference_answer": "Builds remain queued when no suitable executor is available, labels do not match online agents, or agent capacity is insufficient."
+  },
+  {
+    "question": "Why am I getting Jenkins OutOfMemoryError?",
+    "category": "jenkins",
+    "expected_docs": [
+      "jenkins_troubleshooting.md"
+    ],
+    "reference_answer": "OutOfMemoryError occurs when Jenkins exceeds available heap memory because of large jobs, memory leaks, excessive plugins, or resource constraints."
+  },
+
+  {
+    "question": "Why is my Kubernetes pod stuck in Pending state?",
+    "category": "kubernetes",
+    "expected_docs": [
+      "kubernetes_deployment_troubleshooting.pdf"
+    ],
+    "reference_answer": "A pod remains in Pending state when Kubernetes cannot schedule it because of insufficient resources, node constraints, storage issues, or scheduling restrictions."
+  },
+  {
+    "question": "How do I fix ImagePullBackOff errors?",
+    "category": "kubernetes",
+    "expected_docs": [
+      "kubernetes_deployment_troubleshooting.pdf"
+    ],
+    "reference_answer": "ImagePullBackOff occurs when Kubernetes fails to pull a container image because of incorrect image names, authentication problems, missing tags, or registry issues."
+  },
+  {
+    "question": "What causes CrashLoopBackOff in Kubernetes?",
+    "category": "kubernetes",
+    "expected_docs": [
+      "kubernetes_deployment_troubleshooting.pdf"
+    ],
+    "reference_answer": "CrashLoopBackOff occurs when a container repeatedly starts and crashes because of application errors, configuration issues, failed dependencies, or probe failures."
+  },
+  {
+    "question": "Why is my Kubernetes service unreachable?",
+    "category": "kubernetes",
+    "expected_docs": [
+      "kubernetes_deployment_troubleshooting.pdf"
+    ],
+    "reference_answer": "A Kubernetes service may be unreachable because of incorrect selectors, missing endpoints, network policies, DNS issues, or port mismatches."
+  },
+  {
+    "question": "Why is my PersistentVolumeClaim stuck in Pending?",
+    "category": "kubernetes",
+    "expected_docs": [
+      "kubernetes_deployment_troubleshooting.pdf"
+    ],
+    "reference_answer": "A PersistentVolumeClaim remains pending when Kubernetes cannot find or provision suitable persistent storage matching the requested requirements."
+  },
+
+  {
+    "question": "Why am I getting SQL Server Error 18456?",
+    "category": "sqlserver",
+    "expected_docs": [
+      "sql_server_troubleshooting.md"
+    ],
+    "reference_answer": "SQL Server Error 18456 indicates a login failure caused by invalid credentials, authentication mode issues, or permission problems."
+  },
+  {
+    "question": "How do I troubleshoot ODBC Driver IM002 errors?",
+    "category": "sqlserver",
+    "expected_docs": [
+      "sql_server_troubleshooting.md"
+    ],
+    "reference_answer": "ODBC IM002 errors occur when the required ODBC driver, DSN, or connection configuration cannot be found."
+  },
+  {
+    "question": "What causes SQL deadlocks?",
+    "category": "sqlserver",
+    "expected_docs": [
+      "sql_server_troubleshooting.md"
+    ],
+    "reference_answer": "SQL deadlocks occur when multiple transactions wait for resources locked by one another, causing SQL Server to terminate one transaction."
+  },
+  {
+    "question": "What does Invalid Object Name Error 208 mean?",
+    "category": "sqlserver",
+    "expected_docs": [
+      "sql_server_troubleshooting.md"
+    ],
+    "reference_answer": "Error 208 occurs when SQL Server cannot locate the specified table, view, or database object."
+  },
+  {
+    "question": "How do I fix foreign key constraint Error 547?",
+    "category": "sqlserver",
+    "expected_docs": [
+      "sql_server_troubleshooting.md"
+    ],
+    "reference_answer": "Error 547 occurs when an operation violates parent-child relationships defined by foreign key constraints."
+  },
+
+  {
+    "question": "What causes HTTP 500 Internal Server Error after deployment?",
+    "category": "deployment",
+    "expected_docs": [
+      "deployment_troubleshooting.md"
+    ],
+    "reference_answer": "HTTP 500 errors after deployment are usually caused by application exceptions, configuration mistakes, runtime failures, or database issues."
+  },
+  {
+    "question": "How do I troubleshoot HTTP 502 Bad Gateway errors?",
+    "category": "deployment",
+    "expected_docs": [
+      "deployment_troubleshooting.md"
+    ],
+    "reference_answer": "HTTP 502 indicates a proxy or gateway was unable to receive a valid response from the upstream application."
+  },
+  {
+    "question": "Why is my application unable to connect to the production database?",
+    "category": "deployment",
+    "expected_docs": [
+      "deployment_troubleshooting.md"
+    ],
+    "reference_answer": "Production database connectivity failures are commonly caused by incorrect connection strings, credentials, firewall rules, networking restrictions, or TLS configuration problems."
+  },
+
+  {
+    "question": "Cannot connect to Docker daemon. How do I fix it?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Docker daemon connection failures are caused by stopped Docker services, permission problems, incorrect contexts, or Docker Engine issues."
+  },
+  {
+    "question": "How do I resolve Docker port already allocated errors?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Port allocation errors occur when another process or container is already using the requested host port."
+  },
+  {
+    "question": "Why is Docker image pull failing?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Docker image pull failures are caused by authentication issues, registry access problems, invalid image names, or incorrect tags."
+  },
+  {
+    "question": "Why does my container exit immediately after starting?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Containers exit immediately when the main process terminates, crashes, or is misconfigured."
+  },
+  {
+    "question": "Why can't my container connect to another service?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Container connectivity problems are commonly caused by Docker network misconfiguration, DNS issues, incorrect hostnames, or unavailable services."
+  },
+  {
+    "question": "How do I fix permission denied errors in Docker volumes?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Permission denied errors in Docker volumes occur because of ownership mismatches, filesystem permissions, or container user configuration issues."
+  },
+  {
+    "question": "Why is my Docker Compose service failing to start?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "Docker Compose services fail to start because of YAML configuration errors, missing environment variables, dependency failures, or port conflicts."
+  },
+  {
+    "question": "Why is my Docker container showing unhealthy status?",
+    "category": "docker",
+    "expected_docs": [
+      "docker_troubleshooting.md"
+    ],
+    "reference_answer": "An unhealthy container indicates repeated health check failures caused by application issues, startup failures, or incorrect health check configuration."
+  },
+
+  {
+    "question": "How do I restart AWS Lambda to fix deployment issues?",
+    "category": "negative",
+    "expected_docs": [],
+    "reference_answer": "OUT_OF_SCOPE"
+  },
+  {
+    "question": "How do I troubleshoot Apache Spark executor failures?",
+    "category": "negative",
+    "expected_docs": [],
+    "reference_answer": "OUT_OF_SCOPE"
+  },
+  {
+    "question": "How do I deploy a React application to Vercel?",
+    "category": "negative",
+    "expected_docs": [],
+    "reference_answer": "OUT_OF_SCOPE"
+  },
+  {
+    "question": "How do I troubleshoot Oracle RAC cluster failures?",
+    "category": "negative",
+    "expected_docs": [],
+    "reference_answer": "OUT_OF_SCOPE"
+  }
+]

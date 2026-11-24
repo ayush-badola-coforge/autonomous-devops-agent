@@ -21,6 +21,8 @@ class EmbeddingService:
             "dimensions": self.dimensions
         }
         response = requests.post(self.API_URL, headers=self.headers, json=payload)
+        # print(f"-------------------{response.status_code}-------------------")
+        # print(f"-------------------{response.text}-------------------")
         response.raise_for_status()
         data = response.json()
         embeddings = data["embeddings"]

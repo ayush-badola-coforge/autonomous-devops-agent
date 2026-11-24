@@ -43,10 +43,9 @@ class ParseService:
     def _extract_pdf(self, file_path:Path) -> str:
         text = ""
 
-        pdf_document = pymupdf.open(file_path)
-
-        for page in pdf_document:
-            text += page.get_text()
+        with pymupdf.open(file_path) as pdf_document:
+            for page in pdf_document:
+                text += page.get_text() + "\n"
 
         return text
 

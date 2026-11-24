@@ -1,7 +1,7 @@
 # Handles all communictaion with the AI model.
 
 
-import requests
+import requests, json
 from backend.fastapi_app.app.config import settings
 
 class LLMService():
@@ -14,9 +14,10 @@ class LLMService():
         }
         self.temperature = 0.4
         self.top_p = 1.0
-        self.max_tokens = 2500
+        self.max_tokens = 800
 
     def generate_answer(self, prompt: str) -> str:
+        print(f"PROMPT LENGTH: {len(prompt)}")
         payload = {
             "model": self.model,
             "messages": [{"role": "system", "content": "You are an expert senior DevOps Engineer"},{"role": "user", "content": prompt}],
@@ -26,8 +27,16 @@ class LLMService():
         }
         response = requests.post(self.endpoint_url, headers=self.headers, json=payload, timeout=120)
         if not response.ok:
-            print("API STATUS:", response.status_code)
-            print("API ERROR:", response.text)
-        response.raise_for_status()
+            print("\n" + "=" * 80)
+            print("API FAILURE")
+            print("=" * 80)
+            print("Status Code:", response.status_code)
+            print("Response Text:", response.text)
+            print("\nPrompt Length:", len(prompt))
+            print(prompt[:2000])
+            print("\nPayload:")
+            print(json.dumps(payload, indent=2)[:3000])
+            print("=" * 80)
+            response.raise_for_status()
         data = response.json()
         return data['choices'][0]['message']['content']

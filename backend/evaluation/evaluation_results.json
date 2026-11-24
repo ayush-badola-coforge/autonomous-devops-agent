@@ -1,0 +1,53 @@
+{
+    "overall_metrics": {
+        "avg_hit_rate": 1.0,
+        "avg_precision": 1.0,
+        "avg_recall": 1.0,
+        "avg_f1": 1.0,
+        "avg_mrr": 1.0,
+        "avg_retrieval_score": 1.0,
+        "avg_answer_score": 0.64,
+        "avg_rag_score": 0.784
+    },
+    "results": [
+        {
+            "question": "How do I troubleshoot Git checkout failures in Jenkins?",
+            "category": "jenkins",
+            "expected_docs": [
+                "jenkins_troubleshooting.md"
+            ],
+            "retrieved_docs": [
+                "jenkins_troubleshooting.md"
+            ],
+            "generated_answer": "Issue:\nGit checkout failures in Jenkins can occur when Jenkins is unable to connect to or access the Git repository during the checkout stage.\n\nCommon error messages:\n```text\nFailed to connect to repository\n```\n\nor\n\n```text\nfata\n```\n\nLikely causes:\n- Incorrect repository URL in the Jenkins job configuration or Jenkinsfile.\n- Incorrect Jenkins credential selected.\n- The credential does not have permission to read the repository.\n- Git is not installed or configured correctly on the Jenkins agent.\n- SSH access configuration issues.\n\nTroubleshooting steps:\n1. Verify the repository URL in the job configuration or Jenkinsfile.\n2. Check the credential selected in Jenkins.\n3. Confirm that the credential has permission to read the repository.\n4. Check Git installation and configuration on the agent.\n5. For SSH access, review the SSH configuration.\n\nVerification:\nRun version commands in the Jenkins job to confirm the required tools are available and executable:\n\n```bash\njava -version\nmvn -version\nnode --version\n```\n\nConfirm that Jenkins can locate and execute the required tool.",
+            "hit_rate": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "mrr": 1.0,
+            "retrieval_score": 1.0,
+            "correctness": {
+                "assessment": "Good",
+                "evidence": "The generated answer correctly identifies common causes of Git checkout failures such as incorrect repository URLs, credential problems, SSH issues, and access permissions. It also adds plausible troubleshooting steps. However, it omits explicit mention of network connectivity issues from the reference answer."
+            },
+            "completeness": {
+                "assessment": "Good",
+                "evidence": "The answer covers most key causes and troubleshooting actions related to Git checkout failures in Jenkins, including URLs, credentials, permissions, SSH, and Git installation. However, it does not explicitly address network connectivity problems, which are part of the expected answer."
+            },
+            "relevance": {
+                "assessment": "Moderate",
+                "evidence": "Most of the content directly relates to troubleshooting Git checkout failures in Jenkins. However, the verification section includes unrelated commands such as `java -version`, `mvn -version`, and `node --version`, which are not specifically relevant to Git checkout troubleshooting."
+            },
+            "faithfulness": {
+                "assessment": "Good",
+                "evidence": "The generated answer stays generally aligned with the reference answer by focusing on repository access, credentials, SSH, and configuration issues. Additional details such as Git installation checks are reasonable extensions and do not contradict the reference."
+            },
+            "hallucination": {
+                "assessment": "Good",
+                "evidence": "The answer does not contain major fabricated information, but the inclusion of Java, Maven, and Node.js version checks is unsupported by the reference answer and only loosely connected to the problem domain."
+            },
+            "answer_score": 0.64,
+            "rag_score": 0.784
+        }
+    ]
+}

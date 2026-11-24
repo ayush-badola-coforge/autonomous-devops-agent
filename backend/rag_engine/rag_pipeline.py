@@ -1,5 +1,6 @@
 # Ingestion file for the RAG engine. Brings together parsing, chunking and embedding.
 
+import time
 from backend.rag_engine.document_loader import ParseService
 from backend.rag_engine.chunking import ChunkService
 from backend.rag_engine.embeddings import EmbeddingService
@@ -22,10 +23,12 @@ class IngestionService:
             chunks = self.chunker.split_text(document["content"])
             for index, chunk in enumerate(chunks):
                 embedding = (self.embedder.create_embedding(chunk))
+                time.sleep(1)
                 metadata = {
                     "source": document["file_name"],
                     "chunk_index": index,
-                    "file_path": document["file_path"]
+                    "file_path": document["file_path"],
+                    "chunk_id": f"{document['file_name']}_{index}"
                 }
                 self.chroma.add_document(
                     document_id=f"{document['file_name']}_{index}",
